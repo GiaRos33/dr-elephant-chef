@@ -4,8 +4,8 @@ include_attribute "hops"
 
 default['drelephant']['user']                = node['install']['user'].empty? ? "glassfish" : node['install']['user'] 
 default['drelephant']['group']               = node['install']['user'].empty? ? node['hops']['group'] : node['install']['user'] 
-default['drelephant']['uid']                 = "10210"
-default['drelephant']['gid']                 = "10211"
+#default['drelephant']['uid']                 = "10210"
+#default['drelephant']['gid']                 = "10211"
 default['drelephant']['version']             = "2.0.3-SNAPSHOT"
 default['drelephant']['url']                 = "http://snurran.sics.se/hops/dr-elephant-#{node['drelephant']['version']}.zip"
 default['drelephant']['checksum']            = ""
