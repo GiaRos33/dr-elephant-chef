@@ -1,14 +1,14 @@
 
 group node['drelephant']['group'] do
   action :create
-  gid node['drelephant']['gid']
+  #gid node['drelephant']['gid']
   not_if "getent group #{node['drelephant']['group']}"
 end
 
 user node['drelephant']['user'] do
   action :create 
   uid node['drelephant']['uid']  
-  gid node['drelephant']['group']
+  #gid node['drelephant']['group']
   home "/home/#{node['drelephant']['user']}"  
   system true
   shell "/bin/bash"
